@@ -33,6 +33,6 @@ app = flow.compile()
 app.get_graph().draw_mermaid_png(output_file_path="main_flow.png")
 
 if __name__ == "__main__":
-    print("This is the main module.")
+    
     res = app.invoke({"messages": [HumanMessage(content="What is the temperature in Tokyo? List it and then triple it")]})
     print(res["messages"][LAST].content)
